@@ -1,0 +1,97 @@
+package Mercado;
+
+
+//Estanciando as class
+import java.io.*;
+import javax.swing.JOptionPane;
+
+
+public class java {
+
+    public static void main(String args[])
+{
+    // variavel que vamos ultilizar para receber dados atraves do JOptionPane
+     String valor;
+     //variavel para soma
+    float soma,valor_produto1,Desconto1,parcela1, stotal,T ;
+    float ParaOuNao = 1;
+    
+   
+    
+   // emquanto estiver 1 vai execultar o comando 
+    while (ParaOuNao == 1)
+    {
+        // vamos usar para auterar a variavel "ParaOuNao"
+        float chegada;
+        //recebimento de valores
+        valor = JOptionPane.showInputDialog("Digite o valor da Mercadoria");
+        //convertendo String para Float
+        valor_produto1 = Float.parseFloat(valor);
+        
+        //recebimento de valores
+        valor = JOptionPane.showInputDialog("Digite o Desconto ");
+        //convertendo String para Float
+       Desconto1 = Float.parseFloat(valor);
+      
+       //recebimento de valores
+       valor = JOptionPane.showInputDialog("Digite as parcelas");
+       //convertendo String para Float
+       parcela1 = Float.parseFloat(valor);
+      
+       //dizemos que String valor e igual a vazil
+       valor = null;
+       
+       //fazenso as contas 
+       stotal =   Desconto1 - valor_produto1;
+       T = stotal /  parcela1;
+       
+       //vamos exibir em uma pagina 
+       JOptionPane.showMessageDialog(null,"Valor total a pagar e:  " + T + " parcelas de:  " + parcela1);
+       //e vamos exibir pelo pront de commando
+       System.out.println("----------------RECIBO----------------");
+       System.out.println("VALOR DO PRODUTO " + valor_produto1 );
+         System.out.println("VALOR DO DESCONTO " + Desconto1);
+           System.out.println("PARCELAS DE : "+ T +" DE " + parcela1);
+           
+           
+       
+       
+      //aqui vamos auterar a variavel  ParaOuNao para ver se vamos continuar ou parar
+      valor = JOptionPane.showInputDialog("Digite 2 para Incerrar o programa e 1 para continuar ");
+     chegada = Float.parseFloat(valor);
+     ParaOuNao = chegada;
+     
+    //emquanto o usuario digitar o valor maior do que 2 e menor do que 1
+      while(ParaOuNao > 2||ParaOuNao < 1)
+    {
+        
+       JOptionPane.showMessageDialog(null,"Erro Digite certo");
+      valor = JOptionPane.showInputDialog("Digite 2 para Incerrar o programa e 1 para continuar ");
+     chegada = Float.parseFloat(valor);
+     ParaOuNao = chegada;
+    }
+     
+    }
+    //se for igual a dois
+    if(ParaOuNao == 2)
+    {
+        
+    }
+    
+    if(ParaOuNao != 1||ParaOuNao != 2)
+    {
+         float chegada;
+       JOptionPane.showMessageDialog(null,"Erro Digite certo");
+      valor = JOptionPane.showInputDialog("Digite 2 para Incerrar o programa e 1 para continuar ");
+     chegada = Float.parseFloat(valor);
+     ParaOuNao = chegada;
+        
+    }
+    
+    
+    
+}
+    
+    
+    
+}
